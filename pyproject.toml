@@ -1,0 +1,17 @@
+[project]
+name = "codpy-s7-workshop"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Alfos Hsu", email = "Alfos_Hsu@aseglobal.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+codpy-s7-workshop = "codpy_s7_workshop:main"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
