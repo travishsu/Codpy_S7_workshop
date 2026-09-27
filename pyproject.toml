@@ -7,7 +7,10 @@ authors = [
     { name = "Alfos Hsu", email = "Alfos_Hsu@aseglobal.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "torch==2.11.0",
+    "isaacsim[all,extscache]>=6.0.1.0"
+]
 
 [project.scripts]
 codpy-s7-workshop = "codpy_s7_workshop:main"
@@ -15,3 +18,13 @@ codpy-s7-workshop = "codpy_s7_workshop:main"
 [build-system]
 requires = ["uv_build>=0.12.6,<0.13.0"]
 build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[[tool.uv.index]]
+name = "nvidia"
+url = "https://pypi.nvidia.com"
+explicit = true
